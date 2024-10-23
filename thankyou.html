@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/17fc0b51b5.js" crossorigin="anonymous"></script>
+  <script>
+    function printQuery() {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+
+      for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        document.write(pair[0] + ": " + pair[1] + "<br />");
+      }
+    }
+  </script>
+
+  <title>Thank you! </title>
+</head>
+
+<body>
+  <header>
+    <h1>Happy Tail's Boarding</h1>
+  </header>
+  <nav class="navwrapper">
+    <div class="innernav">
+      <a class="navlink" href="index.html"><i class="fa-solid fa-paw"></i> Home <i class="fa-solid fa-paw"></i></a>
+      <a class="navlink" href="reservation.html"><i class="fa-solid fa-paw"></i> Reservation <i
+          class="fa-solid fa-paw"></i></a>
+    </div>
+  </nav>
+<main>
+  <div class="container center">
+    <h2>Thank you! We will be in touch soon!</h2>
+
+    <script>
+      printQuery();
+    </script>
+  </div>
+</main>
+
+
+  <footer class="footerwrapper">
+    <a class="footerlink" href=""><i class="fa-brands fa-facebook"></i></a>
+    <a class="footerlink" href=""><i class="fa-brands fa-twitter"></i></a>
+    <a class="footerlink" href=""><i class="fa-brands fa-instagram"></i></a>
+    <a class="footerlink" href=""><i class="fa-solid fa-paw"></i> 417-666-0420 <i class="fa-solid fa-paw"></i></a>
+    <p class="copyright">&copy; All Rights Reserved 2024</p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+/* Global margin and padding reset */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* yoinked this from stackoverflow, sets body to flex and min-height to full viewport
+flexes to a column, makes the main body flex to fit so that the footer
+doesn't float above nothing when the page isn't big enough */
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header h1 {
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 8rem;
+}
+
+.navwrapper {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+    height: 40px;
+    background-color: black;
+    margin: 2.5% 32.5%;
+    z-index: 1;
+}
+
+.innernav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 0 4rem;
+}
+
+.navlink {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    height: 40px;
+    text-align: center;
+}
+
+/* paws dont get scrunched up into links */
+
+.fa-paw {
+    padding: 0 0.25rem;
+}
+
+.navlink:hover {
+    background-color: white;
+    color: black;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col {
+    width: 65%;
+    margin: 0 17.5% 5% 17.5%;
+}
+
+.colimg {
+    border-radius: 25px;
+    box-shadow: black 5px 2px;
+    float: right;
+    padding: 5px;
+}
+
+.col1,.col2 {
+    font-family: sans-serif;
+    font-size: 1.8rem;
+    border: 2px dashed black;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 2.5%;
+}
+
+.gallery {
+    background-image: url("imgs/wood.png");
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 95%;
+    margin: 0 0 5% 2.5%;
+    padding: 5px;
+    gap: 50px;
+}
+
+.galleryitem {
+    border: 2px dashed black;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
+}
+
+.footerwrapper {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    height: 40px;
+}
+
+.footerlink {
+    position: relative;
+    top: 20%;
+    left: 35%;
+    color: white;
+    padding: 0 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    height: 40px;
+}
+
+.footerlink:hover {
+    background-color: white;
+    color: black;
+}
+
+/* get out of the way, you're important but you keep smooshing things please stop */
+
+.copyright {
+    position: absolute;
+    bottom: 5px;
+    right: 10%;
+    color: white;
+}
+
+#anchorhere {
+    position: relative;
+}
+
+.limitedtime {
+    position: absolute;
+    left: -20%;
+    top: -10%;
+    font-family: Chicle;
+    font-weight: bold;
+    font-size: 2rem;
+    border: 2px dashed black;
+    padding: 2px;
+}
+
+.reservform {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.legendary {
+    padding-top: 10px;
+}
+
+.container {
+    width: 25%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.center{
+    margin: 0 37.5%;
+}
+
+label {
+    display: block;
+    position: relative;
+    padding: 0 0 5px 5px ;
+}
+
+.contactinfoinput {
+    position: absolute;
+    left: 20%;
+    width: 75%;
+}
+
+.submit {
+    width: initial;
+    position: relative;
+    left: 42.5%;
+    top: 10px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 2.5px;
+    color: black;
+    border-color: black;
+}
+
+.submit:hover{
+    box-shadow: white 2px 2px;
+    background-color:rgb(56, 56, 56);
+    color: white;
+}
+
+/* Yeehaw. Next time I'm going to practice making it mobile friendly first, it's really hard
+and not very intuitive to me. Making it desktop first and then swapping makes sense
+in my stupid monkey brain though */
+
+@media screen and (max-width: 832px) {
+    header h1 {
+        font-size: 4rem;
+    }
+
+    .navwrapper {
+        width: 100%;
+        margin: 2.5% 0;
+    }
+
+    .innernav {
+        padding: 0 0.5rem;
+        width: 5%;
+        margin: 0 0;
+    }
+
+    .navlink {
+        padding: 0.75rem 1rem;
+    }
+
+    .col {
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+
+    .col1,.col2 {
+        width: 90%;
+        padding: 10px;
+        margin: 2.5%;
+    }
+
+    .colimg {
+        float: none;
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 20%;
+    }
+
+    .footerlink {
+        position: relative;
+        top: 10%;
+        left: 0;
+        margin-left: 5%;
+        padding: 0 0.5rem;
+    }
+
+    .footerwrapper {
+        background-color: black;
+        width: 100%;
+        height: 80px;
+    }
+
+    .gallery {
+        grid-template-columns: auto;
+        margin: 5% 1%;
+    }
+
+    .limitedtime {
+        top: 20%;
+        left: 1%;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .contactinfoinput{
+        left: 22.5%;
+    }
+}

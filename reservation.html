@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/17fc0b51b5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Happy Tail's Boarding</h1>
+    </header>
+    <nav class="navwrapper">
+        <div class="innernav">
+            <a class="navlink" href="index.html"><i class="fa-solid fa-paw"></i> Home <i class="fa-solid fa-paw"></i></a>
+            <a class="navlink" href="reservation.html"><i class="fa-solid fa-paw"></i> Reservation <i
+                    class="fa-solid fa-paw"></i></a>
+        </div>
+    </nav>
+
+    <main>
+        <form class="reservform" name="reservationform" method="get" action="thankyou.html">
+            <fieldset class="container">
+
+                <legend class="legendary">
+                    <i class="fa-solid fa-paw"></i> Reservation Form <i class="fa-solid fa-paw"></i>
+                </legend>
+
+                <label for="ownername">
+                    Your Name:
+                    <input class="contactinfoinput" type="text" name="ownername" id="ownername" required placeholder="Your Name">
+                </label>
+
+                <label for="petname">
+                    Pet's Name:
+                    <input class="contactinfoinput" type="text" name="petname" id="petname" required placeholder="Your Pet's Name">
+                </label>
+
+                <label for="pettype">
+                    Type of Pet:
+                    <select name="pettype" id="pettype">
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Parrot">Parrot</option>
+                        <option value="Monkey">Monkey</option>
+                    </select>
+                </label>
+
+                <input class="submit" type="submit" value="Submit">
+
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footerwrapper">
+        <a class="footerlink" href=""><i class="fa-brands fa-facebook"></i></a>
+        <a class="footerlink" href=""><i class="fa-brands fa-twitter"></i></a>
+        <a class="footerlink" href=""><i class="fa-brands fa-instagram"></i></a>
+        <a class="footerlink" href=""><i class="fa-solid fa-paw"></i> 417-666-0420 <i class="fa-solid fa-paw"></i></a>
+        <p class="copyright">&copy; All Rights Reserved 2024</p>
+    </footer>
+</body>
+
+</html>
